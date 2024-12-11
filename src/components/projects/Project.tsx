@@ -47,7 +47,7 @@ const Project = () => {
     const getProjects = useMemo(async () => {
         const getData = async () => {
             try {
-                const res = await axios.get("http://localhost:3000/api/v1/repos")
+                const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/repos`)
                 return res.data.data
             } catch (error) {
                 console.log(error)
