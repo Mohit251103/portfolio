@@ -1,10 +1,10 @@
 
 const Nav = () => {
     return (
-        <div key="Nav" className="z-50 sticky top-12 left-1/2 -translate-x-32 mx-auto rounded-full px-4 py-2 flex justify-center items-center bg-black bg-opacity-80 backdrop-blur-sm w-fit h-fit gap-4 mt-12">
+        <div key="Nav" className="z-50 sticky top-12 left-1/2 -translate-x-24 mx-auto rounded-full px-4 py-2 flex justify-center items-center bg-black bg-opacity-80 backdrop-blur-sm w-fit h-fit gap-4 mt-12 shadow-sm shadow-white">
             <a href="#about" className="text-sm font-bold p-2 rounded-full text-white hover:scale-110 transition-all duration-200">About</a>
             <a href="#projects" className="text-sm font-bold p-2 rounded-full text-white hover:scale-110 transition-all duration-200">Projects</a>
-            <a href="#skills" className="text-sm font-bold p-2 rounded-full text-white hover:scale-110 transition-all duration-200">Skills</a>
+            {/* <a href="#skills" className="text-sm font-bold p-2 rounded-full text-white hover:scale-110 transition-all duration-200">Skills</a> */}
         </div>
     )
 }

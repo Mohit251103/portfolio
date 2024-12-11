@@ -2,7 +2,6 @@
 import axios from "axios"
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
-// import raw_data from "./raw"
 
 type IOctokitResponse = {
     name: string;
@@ -31,9 +30,9 @@ const LanguagesUsed = ({ languages }: { languages: any }) => {
         <div className="flex-col justify-center items-start p-2 w-[70%]">
             {Object.keys(languages).map((lang, index) => {
                 return (
-                    <div className="my-2" key={index}>
+                    <div className="my-2 w-full" key={index}>
                         <p className="text-xs font-bold">{lang}</p>
-                        <div className="bg-indigo-600 shadow-sm shadow-indigo-200 w-0 h-2 rounded-full transition-all duration-500 ease-in-out" style={{ width: `${calcPerc[lang]}%` }}></div>
+                        <div className="bg-indigo-500 shadow-md shadow-indigo-500/50 w-0 h-2 rounded-full transition-all duration-500 ease-in-out" style={{ width: `${calcPerc[lang]}%` }}></div>
                     </div>
                 )
             })}
@@ -84,7 +83,7 @@ const Project = () => {
             <h2 className="text-2xl font-bold">Projects</h2>
             <div className="flex-col items-center w-full">
                 {projects?.map((project: IOctokitResponse, index: number) => {
-                    return <div key={index} className="w-full flex justify-start items-center p-4 rounded-md bg-secondary text-secondary-foreground my-2">
+                    return <div key={index} className="w-full flex justify-start items-center p-4 rounded-md bg-[rgb(13,13,13)] text-secondary-foreground my-2">
                         <img src="https://editor.analyticsvidhya.com/uploads/765900ba9-article-200807-github-gitguardbody-text.jpg" alt="github" className="rounded-md h-full w-[30%]" />
                         <div className="flex-col p-2 ml-2 gap-y-2 relative">
                             <p className="text-xl font-bold">{project.name}</p>

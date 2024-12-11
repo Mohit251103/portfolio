@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,6 +75,10 @@
   }
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
@@ -82,4 +87,22 @@ body {
 
 .tooltip {
   @apply text-xs font-light bg-secondary text-secondary-foreground rounded-md p-1 absolute top-0 right-0 translate-x-12 z-30
+}
+
+.inconsolata-600 {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.inconsolata-900 {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
