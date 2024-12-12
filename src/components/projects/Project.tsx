@@ -2,6 +2,8 @@
 import axios from "axios"
 import Link from "next/link"
 import { useEffect, useMemo, useState } from "react"
+import { MdArrowOutward } from "react-icons/md";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 type IOctokitResponse = {
     name: string;
@@ -75,7 +77,9 @@ const Project = () => {
     }, [])
 
     if (!projects) {
-        return <div>Loading...</div>
+        return <div className="flex justify-center items-center h-32">
+            <AiOutlineLoading3Quarters className="animate-spin"/>
+        </div>
     }
 
     return (
@@ -83,14 +87,14 @@ const Project = () => {
             <h2 className="text-2xl font-bold">Projects</h2>
             <div className="flex-col items-center w-full">
                 {projects?.map((project: IOctokitResponse, index: number) => {
-                    return <div key={index} className="w-full flex justify-start items-center p-4 rounded-md bg-[rgb(13,13,13)] text-secondary-foreground my-2">
+                    return <div key={index} className="w-full flex-col justify-start items-center p-4 rounded-md bg-[rgb(13,13,13)] text-secondary-foreground my-2">
                         <img src="https://editor.analyticsvidhya.com/uploads/765900ba9-article-200807-github-gitguardbody-text.jpg" alt="github" className="rounded-md h-full w-[30%]" />
                         <div className="flex-col p-2 ml-2 gap-y-2 relative">
                             <p className="text-xl font-bold">{project.name}</p>
                             <p className="text-md">{project.description}</p>
                             <LanguagesUsed languages={project.languages}></LanguagesUsed>
                             <div className="flex gap-x-2 mt-4">
-                                {project.homepage && <Link href={project.homepage as string} className="rounded-md bg-background hover:opacity-90 p-1 text-foreground text-xs" referrerPolicy="no-referrer" target="_blank">Live Preview</Link>}
+                                {project.homepage && <Link href={project.homepage as string} className="rounded-md bg-secondary hover:opacity-90 p-1 text-foreground text-xs hover:bg-opacity-90 flex items-center" referrerPolicy="no-referrer" target="_blank"><MdArrowOutward />{' '}Live Preview</Link>}
                                 <Link href={project.html_url} className="rounded-md bg-none border hover:bg-muted p-1 text-xs" referrerPolicy="no-referrer" target="_blank">Github</Link>
                             </div>
                         </div>

@@ -50,6 +50,9 @@ export default {
           '5': 'hsl(var(--chart-5))'
         }
       },
+      maskImage: {
+        centerFade: 'linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0))'
+      }
     },
   },
   plugins: [],

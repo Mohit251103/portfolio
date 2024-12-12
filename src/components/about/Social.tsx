@@ -1,6 +1,6 @@
-import { Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { MdAlternateEmail } from "react-icons/md";
 
 const Social = () => {
     return (
@@ -31,6 +31,7 @@ const Social = () => {
                         </Link>
                     </div>
                 </div>
+                <div className="flex items-center justify-center mt-2"><MdAlternateEmail /> mnegi1433@gmail.com</div>
             </div>
         </div>
     )
