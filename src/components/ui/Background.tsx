@@ -16,7 +16,7 @@ const Background = () => {
     }, [])
 
     return (
-        <div className="flex-col mask-center-fade fixed top-0 h-[100vh] w-full opacity-50 overflow-hidden opacity-40 z-30">
+        <div className="flex-col mask-center-fade fixed top-0 h-[100vh] w-full opacity-50 overflow-hidden opacity-40 max-sm:opacity-20 z-30">
             {
                 content.map((row:any[]) => {
                     return <div className="flex w-fit">
